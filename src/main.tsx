@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+// @ts-nocheck
+
+import ReactDOM from "react-dom";
 import App from "./App.tsx";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+window.Chatbot = {
+  mount: function (el) {
+    ReactDOM.render(<App />, el);
+  },
+};
